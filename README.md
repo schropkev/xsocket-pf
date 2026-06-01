@@ -40,7 +40,7 @@ Its usage is:
 
 `listen` and `target` can have a IPv4 or a `[bracketed]` IPv6 (**[::1]** for example). `xsocket.in` and `xsocket.out` can accept `xsocket-server` Unix sockets as file paths (like `/path/to/xsocket-server/socket`) or abstract ones (like `@xsocket-server_socket`).
 
-You must run a `xsocket-server` for each [xsocket](https://github.com/koro666/xsocket) socket, it doesn't matter if is inside a network namespace, VRF, cgropu or whatever shell it belongs to (except inside Virtual Machines).
+You must run a `xsocket-server` for each [xsocket](https://github.com/koro666/xsocket) socket, it doesn't matter if is inside a network namespace, VRF, cgroup or whatever shell it belongs to (except inside Virtual Machines).
 
 **ALWAYS run `xsocket-server` as an unpriviled user for security reasons:**
 
