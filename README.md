@@ -2,7 +2,7 @@
 
 `xsocket-pf` is a TCP/UDP port forwarder using zero-copy mechanism, and it uses [xsocket](https://github.com/koro666/xsocket). Perfect for forwarding host side ports into network namespaces with no `CAP_SYS_ADMIN` privilege.
 
-You can user `xsocket-pf` to forward ports acrooss network namespaces, VRFs and cgroups (in which `xsocket-server` is running and sockets are processed/modified by iptables/nft).
+You can use `xsocket-pf` to forward ports acrooss network namespaces, VRFs and cgroups (in which `xsocket-server` is running and sockets are processed/modified by iptables/nft).
 
 ## Build
 
@@ -40,7 +40,7 @@ Its usage is:
 
 `listen` and `target` can have a IPv4 or a `[bracketed]` IPv6 (**[::1]** for example). `xsocket.in` and `xsocket.out` can accept `xsocket-server` Unix sockets as file paths (like `/path/to/xsocket-server/socket`) or abstract ones (like `@xsocket-server_socket`).
 
-You must run a `xsocket-server` for each [xsocket](https://github.com/koro666/xsocket) socket, it doesn't matter if is inside a network namespace, VRF, cgroup or whatever shell it belongs to (except inside Virtual Machines).
+You must run a `xsocket-server` for each [xsocket](https://github.com/koro666/xsocket) socket if you want to cross-forward across network namespaces and VRFs, it doesn't matter if is inside a network namespace, VRF, cgroup or whatever shell it belongs to (except inside Virtual Machines).
 
 **ALWAYS run `xsocket-server` as an unpriviled user for security reasons:**
 
